@@ -124,7 +124,7 @@ BuyNest/
 
 ### Order History
 
-![Orders](screenshots/orders.png)
+![Orders](Screenshots/orders.png)
 
 ### Authentication
 
