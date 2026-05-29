@@ -88,7 +88,7 @@ BuyNest/
 │
 ├── backend/
 │   ├── store/
-│   ├── ecommerce/
+│   ├── backend/
 │   ├── manage.py
 │   └── requirements.txt
 │
