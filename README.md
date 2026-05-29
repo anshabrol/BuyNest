@@ -108,19 +108,19 @@ BuyNest/
 
 ### Home Page
 
-![Home](screenshots/home.png)
+![Home](Screenshots/Home.png)
 
 ### Product Details
 
-![Product Details](screenshots/product-details.png)
+![Product Details](Screenshots/product-details.png)
 
 ### Shopping Cart
 
-![Cart](screenshots/cart.png)
+![Cart](Screenshots/cart.png)
 
 ### Checkout
 
-![Checkout](screenshots/checkout.png)
+![Checkout](Screenshots/checkout.png)
 
 ### Order History
 
@@ -128,7 +128,7 @@ BuyNest/
 
 ### Authentication
 
-![Login](screenshots/login.png)
+![Login](Screenshots/login.png)
 
 ---
 
