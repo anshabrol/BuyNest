@@ -2,6 +2,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import {useCart} from '../context/CartContext.jsx';
 import { clearTokens, getAccessToken } from '../utils/auth.js';
 const username = localStorage.getItem("username");
+import { useState } from "react";
 
 function Navbar() {
     const {cartItems} = useCart();
