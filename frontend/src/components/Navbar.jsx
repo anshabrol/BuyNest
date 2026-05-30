@@ -8,7 +8,7 @@ function Navbar() {
     const navigate = useNavigate();
     
     const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
-    
+    const [menuOpen, setMenuOpen] = useState(false);
     const isLoggedIn = !!getAccessToken();
     const username =
     localStorage.getItem("username") || "";
@@ -33,6 +33,7 @@ function Navbar() {
         navigate('/login');
     };
     return (
+        <>
         <nav className='bg-white shadow-md px-6 py-6 flex justify-between items-center fixed w-full top-0 z-50'>
     
             <Link
@@ -41,8 +42,11 @@ function Navbar() {
             >
                 🌐🚚 BuyNest
             </Link>
-    
-            <div className='flex items-center gap-6'>
+            {/* Mobile Menu Button */}
+            <button className="md:hidden text-3xl" onClick={() => setMenuOpen(!menuOpen)}>
+                ☰
+            </button>
+            <div className='hidden md:flex items-center gap-6'>
     
                 <Link
                     to='/'
@@ -100,6 +104,75 @@ function Navbar() {
             </div>
     
         </nav>
+        {menuOpen && (
+            <div className="md:hidden fixed top-0 right-0 h-full w-72 bg-white shadow-lg z-50 p-6">
+          
+              <div className="flex justify-between items-center mb-8">
+                <h2 className="text-lg font-bold">
+                  {isLoggedIn
+                    ? `👤 ${displayName}`
+                    : "Menu"}
+                </h2>
+          
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  className="text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+          
+              <div className="flex flex-col gap-6">
+          
+                <Link
+                  to="/"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  🏠 Home
+                </Link>
+          
+                <Link
+                  to="/orders"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  📦 Orders
+                </Link>
+          
+                <Link
+                  to="/cart"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  🛒 Cart ({cartCount})
+                </Link>
+          
+                {!isLoggedIn ? (
+                  <>
+                    <Link
+                      to="/login"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      🔑 Login
+                    </Link>
+          
+                    <Link
+                      to="/signup"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      📝 Sign Up
+                    </Link>
+                  </>
+                ) : (
+                  <button
+                    onClick={handleLogout}
+                    className="text-left text-red-600"
+                  >
+                    🚪 Logout
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
+    </>
     )
 }
 
