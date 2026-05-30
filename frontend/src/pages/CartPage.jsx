@@ -34,14 +34,14 @@ function CartPage() {
                         <div
                             key={item.id}
                             //className="flex items-center justify-between mb-4"
-                            className="flex items-center justify-between mb-6 p-4 border rounded-lg hover:shadow-md transition"
+                            className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 p-4 border rounded-lg hover:shadow-md transition"
                         >
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-4 w-full">
                                 {item.product_image && (
                                     <img
                                         src={item.product_image}
                                         alt={item.product_name}
-                                        className="w-20 h-20 object-cover rounded"
+                                        className="w-20 h-20 object-cover rounded flex-shrink-0"
                                     />
                                 )}
                             </div>
@@ -54,7 +54,7 @@ function CartPage() {
                                 </p>
                             </div>
 
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center justify-center md:justify-end gap-3 w-full md:w-auto">
                                 <button className="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded transition"
                                     onClick={() =>
                                         updateQuantity(
@@ -85,10 +85,10 @@ function CartPage() {
                         </div>
                     ))}
 
-                    <div className="border-t pt-6 mt-6 flex justify-between items-center">
+                    <div className="border-t pt-6 mt-6 flex flex-col md:flex-row gap-4 justify-between items-center">
                         <h2 className="text-xl font-bold">Total:</h2>
                         <p className="text-xl font-semibold">${total.toFixed(2)}</p>
-                        <Link to="/checkout" className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition font-semibold">
+                        <Link to="/checkout" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition font-semibold w-full md:w-auto text-center">
                             Proceed to Checkout
                         </Link>
                     </div>
