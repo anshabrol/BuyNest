@@ -1,6 +1,6 @@
 # 🌐🚚 BuyNest
 
-BuyNest is a full-stack Ecommerce Web Application built using Django REST Framework, React, PostgreSQL, JWT Authentication, and Tailwind CSS.
+A production-ready full-stack e-commerce platform built with React, Django REST Framework, PostgreSQL, JWT Authentication, Tailwind CSS, Cloudinary, Render, Vercel, and Neon PostgreSQL.
 
 The platform allows users to browse products, search products, manage a shopping cart, place orders, and view their order history.
 
@@ -101,6 +101,62 @@ BuyNest/
 │
 └── README.md
 ```
+## 🌍 Live Demo
+
+### Frontend
+
+Deployed on Vercel
+
+🔗 https://your-vercel-url.vercel.app
+
+### Backend API
+
+Deployed on Render
+
+🔗 https://your-render-url.onrender.com
+
+### Admin Panel
+
+🔗 https://your-render-url.onrender.com/admin
+
+---
+
+## 🚀 Deployment Architecture
+
+Frontend (React + Vite)
+↓
+Vercel
+
+Backend (Django REST Framework)
+↓
+Render
+
+Database
+↓
+Neon PostgreSQL
+
+Image Storage
+↓
+Cloudinary
+
+Authentication
+↓
+JWT (JSON Web Tokens)
+
+The frontend communicates with the Django REST API hosted on Render. The backend stores data in Neon PostgreSQL and serves product images through Cloudinary.
+
+---
+
+## ☁️ Production Stack
+
+| Service         | Platform        |
+| --------------- | --------------- |
+| Frontend        | Vercel          |
+| Backend         | Render          |
+| Database        | Neon PostgreSQL |
+| Image Storage   | Cloudinary      |
+| Authentication  | JWT             |
+| Version Control | GitHub          |
 
 ---
 
@@ -224,8 +280,28 @@ View Order History
 * Online Payment Gateway Integration
 * Order Status Tracking
 * Admin Dashboard Analytics
-* Cloudinary Image Storage
 * Product Pagination
+
+---
+## 🔐 Environment Variables
+
+### Backend (.env)
+
+SECRET_KEY=your_secret_key
+
+DATABASE_URL=your_neon_database_url
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+
+CLOUDINARY_API_KEY=your_api_key
+
+CLOUDINARY_API_SECRET=your_api_secret
+
+DEBUG=False
+
+### Frontend (.env)
+
+VITE_DJANGO_BASE_URL=https://your-render-url.onrender.com
 
 ---
 
@@ -233,4 +309,3 @@ View Order History
 
 Ansh Abrol
 
-Built as a Full Stack Ecommerce Project using Django REST Framework, React, PostgreSQL, and JWT Authentication.
