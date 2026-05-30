@@ -27,9 +27,9 @@ function OrdersPage() {
     }, []);
 
     return (
-        <div className="pt-24 min-h-screen bg-gray-100 p-6">
+        <div className="pt-32 md:pt-24 min-h-screen bg-gray-100 p-4 md:p-6">
 
-            <h1 className="text-3xl font-bold mb-6">
+            <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center md:text-left">
                 📦 My Orders
             </h1>
 
