@@ -8,7 +8,7 @@ function ProductCard({ product }) {
       <div className="bg-white rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
 
         <img
-          src={`${BASEURL}${product.image}`}
+          src={product.image}
           alt={product.name}
           className="w-full h-56 object-cover"
         />
