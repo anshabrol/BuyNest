@@ -50,9 +50,9 @@ function CheckoutPage() {
   };
 
   return (
-    <div className="pt-24 min-h-screen bg-gray-100 p-6">
-      <div className="max-w-lg mx-auto bg-white p-6 shadow rounded">
-        <h1 className="text-2xl font-bold mb-4">Checkout</h1>
+    <div className="pt-32 md:pt-24 min-h-screen bg-gray-100 p-4 md:p-6">
+      <div className="max-w-lg mx-auto bg-white p-4 md:p-6 shadow rounded">
+        <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center">Checkout</h1>
 
         <form onSubmit={handleSubmit} className="space-y-3">
           <input
