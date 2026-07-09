@@ -136,3 +136,15 @@ def my_orders(request):
     )
 
     return Response(serializer.data)
+
+
+
+
+
+
+from django.http import JsonResponse
+
+def health(request):
+    return JsonResponse({
+        "status": "healthy"
+    })
